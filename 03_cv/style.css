@@ -1,0 +1,156 @@
+/**/
+
+.navbar {
+	width: 100%;
+	background-image: linear-gradient(to bottom, #141e30, #243b55);
+	min-height: 120px;
+	justify-content: space-between;
+	border-bottom: solid 2px #c9c9bf;
+	box-shadow: 2px 2px 35px 1px #ededdd;
+	padding: 12px 28px;           /*почему этот пэддинг не переписывается последующим в .навлисте?*/
+	font-size: larger;
+	font-weight: 700;
+	letter-spacing: 3px;
+}
+
+.navlist {
+
+	display: flex;
+	list-style: none;
+	padding: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	line-height: 60px;
+}
+
+.navbar .navlist a {
+	text-decoration: none;
+	color: white;
+	margin: 40px;
+}
+
+.navbar .navlist a:hover {
+	color: yellow;
+}
+
+.navpic .navname {
+	float: left;
+}
+
+.navname {
+	position: absolute;
+	top: 3px;
+	left: 120px;
+	color: white;
+	font-size: 26px;
+	font-family: Roboto;
+}
+
+.navpic {
+	position: absolute;
+	top: 20px;
+}
+
+/*main body layout styling*/
+
+		* {
+			box-sizing: border-box;
+		}
+
+		body {
+			margin: 0px;
+		}
+
+		div.content {
+			width:80%;
+		  margin-right: auto;
+		  margin-left:  auto;
+		  min-height: 500px;
+		}
+
+
+		.columns {
+			float: left;
+			width: 50%;
+			padding: 10px;
+
+		}
+
+		/* :after - псевдо элемент и селектор. Задает свойства, которые появятся после выбранного элемента*/
+
+		.table:after {
+			content: "";
+			display: flex;                           /*нет разницы с flex и grid, ?*/
+			clear: both;
+		}
+
+
+		@media screen and (max-width: 1080px) {
+			.columns {
+				width:100%;
+			}
+			div.content {
+				width:100%;
+			}
+		}
+
+/*font styling*/
+
+		* {
+			text-align: justify;
+		  	text-justify: inter-word;
+		}
+
+		h1, h2 {
+		    font-family: Arial;
+		    color: steelblue;
+		  	text-align: left;
+		}
+
+
+		#name {
+			font-size: 3em;
+		}
+
+		#job {
+			font-size: 2em;
+			font-style:  italic;
+			text-align: center;
+		}
+
+
+li.year{
+	font-style: italic;
+	list-style-type: none;
+	color: red;
+	margin-left: -40px;
+	padding-left: 0px;
+	margin-top: 10px;
+}
+
+li.accomplishment{
+	list-style-type: disc;
+	font-style: normal;
+	color: black;
+	margin-left: 10px;
+	padding-left: 5px;
+	margin-top: 0px;
+}
+
+
+/*Footer*/
+.footer {
+	width: 100%;
+	margin-left: 0px;
+	margin-right: 0px;
+	background-image: linear-gradient(to bottom, #141e30, #243b55);
+	min-height: 40px;
+	justify-content: space-between;
+	border-top: solid 2px #c9c9bf;
+	box-shadow: 2px 2px 35px 1px #ededdd;
+	padding: 12px 28px;
+	font-size: smaller;
+	font-weight: 700;
+	letter-spacing: 3px;
+	color: white;
+}
