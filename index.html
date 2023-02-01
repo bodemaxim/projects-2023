@@ -2,6 +2,8 @@
 <html lang='en'>
 <head>
   <meta charset='utf-8'>
+  <meta name="viewport"
+        content="width=device-width, initial-scale=1">
   <title>Maxim Bode</title>
 
   <!-- Bootstrap CSS -->
@@ -22,171 +24,193 @@
 
 <!--Ссылки на проекты-->
 
-<div><!--table-->
+<div class = "container">  <!--table-->
+    <div class = "row">   <!--learn about gx and px!!-->
 
-    <section>
-        <h3>Project 8. 
-            Project Portfolio v1.0</h3>
-        <p>Date: 19-? January 2023</p>
-        <p>Description: I collected references to the webpages
-            I created on one single page. Here you can see
-            how I've progressed with frontend development.
-            This project is still on the go.
-        </p>
-        <p>Achievement: I aim to revise adaptive design,
-            Twitter Bootstrap and add some JS animation.
-        </p>
-        <div class = "btnContainer">
-            <form
-                class = "btnElement"
-                style = "display: inline"
-                action = "index.html"
-                target = "_blank">
-                <button class="btn-1">View Project</button>
-            </form>
-        </div>
-    </section>
+        <section class="col-xs-12 col-md-6 col-lg-4 flex-container">
+            <div class = projectCard>
+                <h3>Project 8. 
+                    Project Portfolio v1.0</h3>
+                <p>Date: 19-? January 2023</p>
+                <p>Description: I collected references to the webpages
+                    I created on one single page. Here you can see
+                    how I've progressed with frontend development.
+                    This project is still on the go.
+                </p>
+                <p>Achievement: I aim to revise adaptive design,
+                    Twitter Bootstrap and add some JS animation.
+                </p>
+                <div class = "btnContainer">
+                    <form
+                        class = "btnElement"
+                        style = "display: inline"
+                        action = "index.html"
+                        target = "_blank">
+                        <button class="btn-1">View Project</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h3>Project 7. 
-            Harry Potter's Magical Webpage</h3>
-        <p>Date: 18 January 2023</p>
-        <p>Description: Harry's sitting on a broomstick.
-            Click a button and he will turn.</p>
-        <p>Achievement: here I practised JS basics: functions and methods,
-            namely, getElementByID and onClick.</p>
-        <div class = "btnContainer">
-            <form
-                class = "btnElement"
-                style = "display: inline"
-                action = "08_harry_potter/index.html"
-                target = "_blank">
-                <button class="btn-1">View Project</button>
-            </form>
-        </div>
-    </section>
+        <section class="col-xs-12 col-md-6 col-lg-4 flex-container">
+            <div class = projectCard>
+              <div class = txtContainer>
+                <h3>Project 7. 
+                    Harry Potter's Magical Webpage</h3>
+                <p>Date: 18 January 2023</p>
+                <p>Description: Harry's sitting on a broomstick.
+                    Click a button and he will turn.</p>
+                <p>Achievement: here I practised JS basics: functions and methods,
+                    namely, getElementByID and onClick.</p>
+              </div>
 
-    <section>
-        <h3>Project 6. JS Exercise</h3>
-        <p>Date: 15 January 2022</p>
-        <p>Description: An exercise from Yaakov
-            Chaikin's course. Nothing really happens on this
-            webpage. But if you open the js console,
-            you'll see what it is about. It's a
-            greeter program, which says 'hello' to
-            every name except for names starting with
-            'J'. To those, it says 'bye'.</p>
-        <p>Achievement: I practiced JS: IIFE,
-            functions, loops.
-        </p>
-        <div class = "btnContainer">
-            <form
-                class = "btnElement"
-                style = "display: inline"
-                action = "07_module_4_solution/index.html"
-                target = "_blank">
-                <button class="btn-1">View Project</button>
-            </form>
-        </div>
-    </section>
+                <div class = "btnContainer">
+                    <form
+                        class = "btnElement"
+                        style = "display: inline"
+                        action = "08_harry_potter/index.html"
+                        target = "_blank">
+                        <button class="btn-1">View Project</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h3>Project 5. Restaurant Menu (2)</h3>
-        <p>Date: 28-30 November 2022</p>
-        <p>Description: An exercise from Yaakov
-            Chaikin's course. A very sketchy restaurant menu.</p>
-        <p>Achievement: Used Bootstrap to create a navigation bar
-            with a hamburger menu button for the phone view.
-        </p>
-        <div class = "btnContainer">
-            <form
-                class = "btnElement"
-                style = "display: inline"
-                action = "05_module_3_solution/index.html"
-                target = "_blank">
-                <button class="btn-1">View Project</button>
-            </form>
-        </div>
-    </section>
+        <section class="col-xs-12 col-md-6 col-lg-4 flex-container">
+            <div class = projectCard>
+                <h3>Project 6. JS Exercise</h3>
+                <p>Date: 15 January 2022</p>
+                <p>Description: An exercise from Yaakov
+                    Chaikin's course. Nothing really happens on this
+                    webpage. But if you open the js console,
+                    you'll see what it is about. It's a
+                    greeter program, which says 'hello' to
+                    every name except for names starting with
+                    'J'. To those, it says 'bye'.</p>
+                <p>Achievement: I practiced JS: IIFE,
+                    functions, loops.
+                </p>
+                <div class = "btnContainer">
+                    <form
+                        class = "btnElement"
+                        style = "display: inline"
+                        action = "07_module_4_solution/index.html"
+                        target = "_blank">
+                        <button class="btn-1">View Project</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h3>Project 4. Restaurant Menu (1)</h3>
-        <p>Date: 17 November 2022</p>
-        <p>Description: An exercise from Yaakov
-            Chaikin's course. A sketchy restaurant menu
-            with three categories of dishes.</p>
-        <p>Achievement: I created an adaptive layout
-            using bootstrap-like classes and media queries.</p>
-        <div class = "btnContainer">
-            <form
-                class = "btnElement"
-                style = "display: inline"
-                action = "04_module_2_solution/index.html"
-                target = "_blank">
-                <button class="btn-1">View Project</button>
-            </form>
-        </div>
-    </section>
+        <section class="col-xs-12 col-md-6 col-lg-4 flex-container">
+            <div class = projectCard>
+                <h3>Project 5. Restaurant Menu (2)</h3>
+                <p>Date: 28-30 November 2022</p>
+                <p>Description: An exercise from Yaakov
+                    Chaikin's course. A very sketchy restaurant menu.</p>
+                <p>Achievement: Used Bootstrap to create a navigation bar
+                    with a hamburger menu button for the phone view.
+                </p>
+                <div class = "btnContainer">
+                    <form
+                        class = "btnElement"
+                        style = "display: inline"
+                        action = "05_module_3_solution/index.html"
+                        target = "_blank">
+                        <button class="btn-1">View Project</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h3>Project 3. CV</h3>
-        <p>Date: 6-13 November 2022</p>
-        <p>Description: A website containing my CVs.</p>
-        <p>Achievement: My first navigation bar created on Bootstrap.
-            My first adaptive layout. I used bootstrap-like classes
-            classes and media queries.
-        </p>
-        <div class = "btnContainer">
-            <form
-                class = "btnElement"
-                style = "display: inline"
-                action = "03_cv/index.html"
-                target = "_blank">
-                <button class="btn-1">View Project</button>
-            </form>
-        </div>
-    </section>
+        <section class="col-xs-12 col-md-6 col-lg-4 flex-container">
+            <div class = projectCard>
+                <h3>Project 4. Restaurant Menu (1)</h3>
+                <p>Date: 17 November 2022</p>
+                <p>Description: An exercise from Yaakov
+                    Chaikin's course. A sketchy restaurant menu
+                    with three categories of dishes.</p>
+                <p>Achievement: I created an adaptive layout
+                    using bootstrap-like classes and media queries.</p>
+                <div class = "btnContainer">
+                    <form
+                        class = "btnElement"
+                        style = "display: inline"
+                        action = "04_module_2_solution/index.html"
+                        target = "_blank">
+                        <button class="btn-1">View Project</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h3>Project 2. Dating profile</h3>
-        <p>Date: 26 October 2022</p>
-        <p>Description: A mock two-page dating profile,
-            presenting personal info and photos.
-        </p>
-        <p>Achievement: My very first multy-page HTML.
-            I also made my first simple
-            navigation bar and buttons.
-        </p>
-        <div class = "btnContainer">
-            <form
-                class = "btnElement"
-                style = "display: inline"
-                action = "02_dating_profile/index.html"
-                target = "_blank">
-                <button class="btn-1">View Project</button>
-            </form>
-        </div>
-    </section>
+        <section class="col-xs-12 col-md-6 col-lg-4 flex-container">
+            <div class = projectCard>
+                <h3>Project 3. CV</h3>
+                <p>Date: 6-13 November 2022</p>
+                <p>Description: A website containing my CVs.</p>
+                <p>Achievement: My first navigation bar created on Bootstrap.
+                    My first adaptive layout. I used bootstrap-like classes
+                    classes and media queries.
+                </p>
+                <div class = "btnContainer">
+                    <form
+                        class = "btnElement"
+                        style = "display: inline"
+                        action = "03_cv/index.html"
+                        target = "_blank">
+                        <button class="btn-1">View Project</button>
+                    </form>
+                </div>
+            </div>
+        </section>
 
-    <section>
-        <h3>Project 1. Poems</h3>
-        <p>Date: 23 October 2022</p>
-        <p>Description: A webpage containing two poems and illustrations.</p>
-        <p>Achievement: My very first fully functional HTML page. I practised
-            basic HTML tags and learned to upload images. Some simple CSS styles,
-            such as font size and color, were used.
-        </p>
-        <div class = "btnContainer">
-            <form
-                class = "btnElement"
-                style = "display: inline"
-                action = "01_poems/poems.html"
-                target = "_blank">
-                <button class="btn-1">View Project</button>
-            </form>
-        </div>
-    </section>
-</div> <!--table-->
+        <section class="col-xs-12 col-md-6 col-lg-6 flex-container">
+            <div class = projectCard>
+                <h3>Project 2. Dating profile</h3>
+                <p>Date: 26 October 2022</p>
+                <p>Description: A mock two-page dating profile,
+                    presenting personal info and photos.
+                </p>
+                <p>Achievement: My very first multy-page HTML.
+                    I also made my first simple
+                    navigation bar and buttons.
+                </p>
+                <div class = "btnContainer">
+                    <form
+                        class = "btnElement"
+                        style = "display: inline"
+                        action = "02_dating_profile/index.html"
+                        target = "_blank">
+                        <button class="btn-1">View Project</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <section class="col-xs-12 col-md-6 col-lg-6 flex-container">
+            <div class = projectCard>
+                <h3>Project 1. Poems</h3>
+                <p>Date: 23 October 2022</p>
+                <p>Description: A webpage containing two poems and illustrations.</p>
+                <p>Achievement: My very first fully functional HTML page. I practised
+                    basic HTML tags and learned to upload images. Some simple CSS styles,
+                    such as font size and color, were used.
+                </p>
+                <div class = "btnContainer">
+                    <form
+                        class = "btnElement"
+                        style = "display: inline"
+                        action = "01_poems/poems.html"
+                        target = "_blank">
+                        <button class="btn-1">View Project</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    </div> <!--row-->
+</div> <!--container-->
 
 <!-- JS script -->
 <script src = 'js/script.js'></script>

@@ -27,29 +27,44 @@ body {
 
 /*main content*/
 section {
-  width: 50%;
-  padding: 15px;
+  padding: 20px;
+  padding-right: 20px;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+div.projectCard {
   background-color: #f2f4f7;
   min-height: 150px;
   border-style: solid;
   border-width: 3px;
   border-color:black;
   border-radius: 10px;
-  margin: auto;
-  margin-bottom: 20px;
-  margin-top: 20px;
+  padding: 15px;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+
+.flex-container {
+  display: flex;
 }
 
 .btnContainer {
-  height: 60px;
+  min-height: 60px;
   width: 100%;
   margin: auto;
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+  flex-grow : 1;
   position: relative;
 }
 
 .btnElement {
   position: absolute;
   left: calc(50% - 100px);
+  bottom: 0px;
 }
 
   /*setting style for buttons*/
