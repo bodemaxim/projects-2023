@@ -1,3 +1,9 @@
+/* Variables */
+:root {
+  --btnWidth: 200px;
+}
+
+
 /********** Base styles **********/
 * {
   box-sizing: border-box;
@@ -63,15 +69,14 @@ div.projectCard {
 
 .btnElement {
   position: absolute;
-  left: calc(50% - 100px);
+  left: calc(50% - var(--btnWidth)/2);
   bottom: 0px;
 }
 
   /*setting style for buttons*/
   
   .btn-1 {
-
-    width:  200px;
+    width:  var(--btnWidth);
     height: 50px;
     border-style: solid;
     border-width: 3px;
@@ -87,4 +92,3 @@ div.projectCard {
     background-color: black;
     color: white;
   }
-  

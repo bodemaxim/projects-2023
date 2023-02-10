@@ -1,0 +1,137 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <title>JS Exercises</title>
+  <link href="prism/prism.css" rel="stylesheet" />
+</head>
+<body>
+
+<h2>Задача 6. Вывод таблицы умножения до заданного числа в консоль</h2>
+<h3>Задание</h3>
+<p>
+  Написать метод, который в консоль выводит таблицу умножения. На вход метод получает число, до которого выводит таблицу умножения. В консоли должна появиться таблица. Например, если на вход пришло число 5, то получим:
+</p>
+
+<img
+  src = "task_6_example.png"
+  alt = "пример"
+  width = "128"
+  height = "100">
+
+<p>
+  Важно:<br>
+  ●	В последней строке между числами ровно по одному пробелу должно выводиться. <br>
+  ●	В каждом столбце числа должны быть выровнены по правому краю.
+</p>
+
+<h3>Посмотреть, как работает</h3>
+
+  <p>
+    Enter an integer.
+    <input id = "number" type = "text">
+    <button onclick= "makeTable();">
+      Get a table!
+    </button>
+  </p>
+
+  <pre>
+    <p id="table"></p>
+  </pre>
+
+<h3>Код</h3>
+<pre>
+  <code class = "language-js">
+    /**
+    * Выводит в консоль таблицу умножения
+    * 
+    * @param {*} maxMultiplier - максимальный множитель в таблице
+    * @returns таблица умножения в консоли
+    */
+
+    function makeTable(maxMultiplier){
+      const arrayTable = [] /*создаем массив в который пойдут массивы-строки*/
+        
+      /*создаем образец последней строки (для выравнивания в будущем)*/
+      function createLastArray(maxMultiplier) {
+        let lastRow = [maxMultiplier]
+
+        for (let i = 1; i &lt;= maxMultiplier; i++)
+          lastRow.push(i*maxMultiplier)
+
+        return lastRow
+      }
+      lastRowSaved = createLastArray(maxMultiplier)
+
+      /*переводим массив элементов последней строки таблицы
+      в массив количества символов в каждом элементе*/
+      columnWidthArray = []
+
+      lastRowSaved.forEach((element) => {
+        let newString = element.toString()
+        let newWidth = newString.length
+
+        return columnWidthArray.push(newWidth)
+      })
+
+      /*функция по индексу элемента массива возвращает его значение*/
+      function maxWidthTeller(array, index) {
+
+        return array[index]
+      }
+      
+      /*функция принимает на вход массив и индекс элемента,
+      на выход дает количество пробелов чтобы уровнять элемент с самым широкими элементом столбца*/
+      
+      function spaceAdder(array, index){
+        let wantedWidth = maxWidthTeller(columnWidthArray, index)
+        let elementString = array[index].toString()
+        const factualWidth = elementString.length
+        const spaces = ' '.repeat(wantedWidth - factualWidth)
+
+        return spaces
+      }
+
+      /*создаем особую первую строку*/
+      function createFirstArray(maxMultiplier) {
+        let firstRow = ['']
+        firstRow[0] = spaceAdder(firstRow, 0) + ''
+
+        for (let i = 1; i &lt;= maxMultiplier; i++) {
+          firstRow.push(i)
+          firstRow[i] = spaceAdder(firstRow, i) + i  /*пишем элементы в массив с пробелами для выравнивания*/
+        }
+
+        firstRowString = firstRow.join(' ') /*здесь оставим пробел*/
+        arrayTable.push(firstRowString)
+      }
+      createFirstArray(maxMultiplier)
+
+      /*создаем обычные строки в таблице*/
+      for (let i = 1; i &lt;= maxMultiplier; i++) {
+          function createArray(i, maxMultiplier) {
+            let newRow = [i]
+            newRow[0] = spaceAdder(newRow, 0) + i
+
+            for (let i2 = 1; i2 &lt;= maxMultiplier; i2++) {
+              newRow.push(i*i2)
+              newRow[i2] = spaceAdder(newRow, i2) + i*i2 /*пишем элементы в массив с пробелами для выравнивания*/
+            }
+
+            newRowString = newRow.join(' ')
+            arrayTable.push(newRowString)
+          }
+          createArray(i, maxMultiplier)
+      }
+
+      arrayTableString = arrayTable.join('\n')
+
+      return console.log(arrayTableString)
+    }
+  </code>
+</pre>
+
+  <script src = "task6.js"></script>
+  <script src = "prism/prism.js"></script>
+</body>
+</html>
