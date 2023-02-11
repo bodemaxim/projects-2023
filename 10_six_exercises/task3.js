@@ -24,13 +24,13 @@ const x = document.getElementById("numberOfComputers").value
   let nounCase = ''
 
   if (/^1$|[^1]1/.test(x) == true) {
-    nounCase = 'компьютер'
+    nounCase = 'komputer'
   }
-    else if (/^2$|^3$|^4$/.test(x) == true) {
-      nounCase = 'компьютера'
+    else if (/^2$|^3$|^4$|[^1]4/.test(x) == true) {
+      nounCase = 'komputera'
     }
       else {
-        nounCase = 'компьютеров'
+        nounCase = 'komputerov'
       }
 
   /*послать результат в HTML*/
