@@ -3,6 +3,7 @@
 <head>
   <meta charset='utf-8'>
   <title>TITLE</title>
+  <link href="prism/prism.css" rel="stylesheet" />
 
   <!-- My styles -->
   <link rel='stylesheet' href='css/styles.css'> 
@@ -28,7 +29,30 @@
     height = "545">
 
 
+<pre>
+  <code class="language-js">
+    function turnHarryLeft () {
+      document
+        .getElementById("harry")
+        .src = "harry_heads_left.png"
+        document
+          .getElementById("btnTurn")
+          .onclick = function() {turnHarryRight()}
+    }
+
+    function turnHarryRight () {
+        document
+          .getElementById("harry")
+          .src = "harry_heads_right.png"
+          document
+            .getElementById("btnTurn")
+            .onclick = function() {turnHarryLeft()}
+    }
+  </code>
+</pre>
+
   <!-- JS script -->
   <script src = 'js/script.js'></script>
+  <script src = "prism/prism.js"></script>
 </body>
 </html>
