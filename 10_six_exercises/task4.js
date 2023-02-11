@@ -16,13 +16,14 @@
  * @returns true - число является простым, false - число НЕ является простым
  */
 
-function primeTester(x) {
+function primeTester() {
+
+  const x = document.getElementById("numberToTest").value
 
   const testArray = [];
     for (let i = 2; i < x; i++) 
         testArray.push(i);
   
-
   const resultsArray = []
 
   testArray.forEach((element) => {
@@ -40,7 +41,7 @@ function primeTester(x) {
     answer = resultsArray.every((element) => {
       return element == false})
 
-  return console.log('Ваше число простое: ' + answer)
+  document.getElementById("primeTestResult").innerHTML = answer
 }
 
 /*Type here*/

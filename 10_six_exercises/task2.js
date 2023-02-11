@@ -8,8 +8,6 @@
 27 => 25, 27.8 => 30, 41.7 => 40.
 */
 
-let numberToRound = 23.4
-
 /**
  * Функция принимает число и округляет его до 5.
  * 
@@ -17,10 +15,11 @@ let numberToRound = 23.4
  * @returns число, округленное до 5 
  */
 
-function roundToFive(x) {
-    return Math.round(x/5) * 5;
+function roundToFive() {
+  const x = document.getElementById("numberToRound").value
+
+  const roundedNumber = Math.round(x/5) * 5
+
+  document.getElementById("roundedNumber")
+    .innerHTML = roundedNumber;
   }
-
-console.log(roundToFive(numberToRound))
-
-

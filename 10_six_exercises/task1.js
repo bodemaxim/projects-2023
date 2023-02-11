@@ -21,7 +21,7 @@ let citiesList = ['Paris', 'Madrid', 'Rome', 'London'];
 function makeLine(arrayOfCities) {
     const commasList = arrayOfCities.join(', ');
     const finalList = commasList + '.'
-    console.log(finalList)
+    return finalList
 }
 
 makeLine(citiesList)

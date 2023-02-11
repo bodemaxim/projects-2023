@@ -8,41 +8,31 @@
 «41 компьютер», «1048 компьютеров».
 */
 
-const numberOfComputers = 20
-
 /**
  * функция принимает число и указывает правильный падеж слова "компьютер" для этого числа
  * 
  * @param {*} x - число
  * @returns - правильный падеж слова "компьютер"
  */
-function guessCaseByNumber(x) {
+function guessCaseByNumber() {
   
+/*взять значение параметра
+  (числа на округление) из HTML*/
+const x = document.getElementById("numberOfComputers").value
+
+
   let nounCase = ''
 
   if (/^1$|[^1]1/.test(x) == true) {
-    nounCase = 'komputer'
+    nounCase = 'компьютер'
   }
     else if (/^2$|^3$|^4$/.test(x) == true) {
-      nounCase = 'komputera'
+      nounCase = 'компьютера'
     }
       else {
-        nounCase = 'komputerov'
+        nounCase = 'компьютеров'
       }
-  return nounCase
+
+  /*послать результат в HTML*/
+  document.getElementById("caseOfComputers").innerHTML = nounCase
 }
-
-console.log('Printing out your number and \"Computer\" in the right case: '
-        + numberOfComputers + ' ' + guessCaseByNumber(numberOfComputers))
-
-
-/*Test the case guesser*/
-
-const myArray = [];
-
-for (let i = 1; i <= 100; i++) {
-   myArray.push(i);
-}
-
-myArray.forEach((element) =>
-  console.log(element + ' ' + guessCaseByNumber(element)))
