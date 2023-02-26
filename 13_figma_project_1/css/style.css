@@ -1,0 +1,144 @@
+
+/*VARIABLES*/
+:root {
+
+  /*Special colors*/
+  --main: #66C05D;
+  --light: #EFEFEF;
+
+  /*Width*/
+  --container-width: 70%;
+}
+
+/*General*/
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.container {
+  margin: auto;
+  width: var(--container-width);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/*Header*/
+
+.brand-name-container {
+  display: flex;
+  justify-content: left;
+}
+
+.navbar {
+  background-color: var(--light);
+  min-height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  }
+
+.navbar__list {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar__element {
+  padding: 0px 15px;
+}
+
+.header-line2 {
+  background-color: white;
+}
+
+.header-line2__element {
+  padding: 0px 5px;
+}
+
+.navbar2 {
+  background-color: white;
+  min-height: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  border-top: 1px solid black;
+  }
+
+.navbar2__list {
+  display: flex;
+  list-style-type: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.navbar2__element {
+  padding: 0px 20px;
+}
+
+/*Jumbotron*/
+
+.jumbotron {
+  width: 100%;
+  height: auto;
+}
+
+.jumbotron-text-fixer {
+  position: relative;
+}
+
+.jumbotron-container {
+  position: absolute;
+  top: 10px;
+  left: calc((100% - var(--container-width))/2)
+}
+
+
+/*Special offers*/
+.special-offers {
+  background-color: var(--light);
+  text-align: center;
+}
+
+.special-offers-card {
+  background-color: white;
+  height: 363px;
+  width: 255px;
+  margin-top: 38px;
+  margin-bottom: 100px;
+}
+
+.special-offers-card__img {
+  height: 166px;
+  width: 125px;
+  text-align: center;
+  margin-top: 25px;
+  margin-bottom: 20px;
+}
+
+/*Footer*/
+.footer-line1 {
+  background-color: white;
+  min-height: 32px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer-line1__element {
+  padding: 0px 10px;
+}
+
+.footer-line2 {
+  background-color: var(--light);
+  min-height: 100px;
+}
+
+.footer-line2__element {
+  padding: 0px 10px;
+}
