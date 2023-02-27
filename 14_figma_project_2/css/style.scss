@@ -1,0 +1,127 @@
+/*VARIABLES*/
+$pink: #D4B098;
+$dark: #444240;
+$light: #FDFDFB;
+$container-width: 70%;
+
+/*TEMPLATES*/
+%flex-in-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+/*MIXINS*/
+
+/*GENERAL*/
+body {
+  background-color: lightgray;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.container {
+  margin: auto;
+  width: $container-width;
+  background-color: white;
+}
+
+.container-flex {
+  margin: auto;
+  width: $container-width;
+  background-color: white;
+  @extend %flex-in-row;
+}
+
+/*Header*/
+
+.navbar {
+  background-color: rgb(255, 255, 255);
+  min-height: 32px;
+  @extend %flex-in-row;
+  ul {
+    list-style: none;
+    @extend %flex-in-row;
+    li {
+      padding: 0px 15px;
+    }
+  }
+}
+
+/*Jumbotron*/
+
+.jumbotron {
+  position: relative;
+  height: 792px;
+  width: $container-width
+}
+
+.out-of-flow-item {
+  position: absolute;
+}
+.watch-img {
+  top: 0px;
+  right: 0px;
+  height: 804px;
+  width: auto;
+}
+.watch-price{
+  top: 100px;
+  right: 400px;
+}
+.watch-size{
+  top: 704px;
+  right: 15px;
+}
+.watch-ad{
+  top: 300px;
+  left: 150px;
+  max-width: 300px;
+}
+
+/*Popular models*/
+.popular-models-cards {
+  background-color: $light;
+  margin: 10px;
+}
+
+.popular-models__heading {
+  text-align: center;
+}
+
+/*Footer*/
+.footer {
+  background-color: $dark;
+}
+
+.container-flex-footer {
+  margin: auto;
+  width: $container-width;
+  @extend %flex-in-row;
+  align-items:flex-start;
+  background-color: $dark;
+  div{
+    padding: 15px 10px 10px 10px;
+  }
+  div.text {
+    position: relative;
+    top: -2px;
+  }
+  p,h2 {
+    color: white;
+  }
+}
+
+footer {
+  p{
+    font-size: 10px;
+  }
+  h2{
+    font-size: 1.25em;
+  }
+}
