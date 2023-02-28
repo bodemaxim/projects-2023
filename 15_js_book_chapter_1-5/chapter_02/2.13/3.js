@@ -1,0 +1,5 @@
+for (let i = 0; i < 5; ++i) alert( i );
+
+for (let i = 0; i < 5; i++) alert( i );
+
+//выведутся числа от 0 до 4
