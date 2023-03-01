@@ -80,11 +80,35 @@ body {
 /*Popular models*/
 .popular-models-cards {
   background-color: #FDFDFB;
-  margin: 10px;
+  margin: 15px 15px 30px 15px;
 }
 
 .popular-models__heading {
   text-align: center;
+}
+
+/*Genuine quality*/
+.genuine-quality-section {
+  background-image: url("/images/background_banner_1.png");
+  background-repeat: no-repeat;
+  background-size: auto;
+  background-color: #FDFDFB;
+  min-height: 519px;
+  position: relative;
+}
+
+.genuine-quality-section__photo {
+  position: absolute;
+  top: 52px;
+  left: 177px;
+}
+
+.genuine-quality-text {
+  text-align: left;
+  position: relative;
+  left: 40%;
+  max-width: 40%;
+  top: 200px;
 }
 
 /*Footer*/

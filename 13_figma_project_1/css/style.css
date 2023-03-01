@@ -5,9 +5,11 @@
   /*Special colors*/
   --main: #66C05D;
   --light: #EFEFEF;
+  --dark: #333333;
 
   /*Width*/
   --container-width: 70%;
+  --container-width-sm: 90%;
 }
 
 /*General*/
@@ -17,7 +19,17 @@
 
 body {
   margin: 0;
+  font-family: Roboto;
+  color: var(--dark);
+  font-size: 14px;
 }
+
+@media screen and (max-width: 576px) {
+  body {
+    font-size: 75%;
+  }
+}
+
 
 .container {
   margin: auto;
@@ -25,13 +37,80 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
 }
+
+ul {
+  padding-inline-start: 0px;
+}
+
+.brand-name {
+  color: var(--main);
+}
+
+.price {
+  color: black;
+  font-weight: 500;
+}
+
+
+/*Buttons*/
+.btn-buy {
+  background-color: var(--main);
+  border: none;
+  color: white;
+  padding: 6px;
+  text-align: center;
+  text-decoration: none;
+  text-transform: capitalize;
+  display: inline-block;
+  font-size: 1em;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 17px;
+  width: 130px;
+  height: 35px;
+}
+
+.btn-call {
+  background-color: var(--main);
+  border: none;
+  color: white;
+  padding: 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.1em;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 17px;
+  min-width: 130px;
+  height: 35px;
+}
+
+.btn-more {
+  background-color: var(--main);
+  border:solid;
+  color: white;
+  padding: 6px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1.1em;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 17px;
+  min-width: 130px;
+  height: 35px;
+}
+
 
 /*Header*/
 
 .brand-name-container {
   display: flex;
   justify-content: left;
+  align-items: center;
 }
 
 .navbar {
@@ -40,6 +119,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+  flex-wrap: wrap;
   }
 
 .navbar__list {
@@ -47,10 +127,11 @@ body {
   list-style-type: none;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .navbar__element {
-  padding: 0px 15px;
+  padding: 5px 15px;
 }
 
 .header-line2 {
@@ -68,6 +149,7 @@ body {
   flex-direction: column;
   justify-content: center;
   border-top: 1px solid black;
+  flex-wrap: wrap;
   }
 
 .navbar2__list {
@@ -75,10 +157,11 @@ body {
   list-style-type: none;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
 }
 
 .navbar2__element {
-  padding: 0px 20px;
+  padding: 5px 20px;
 }
 
 /*Jumbotron*/
@@ -95,7 +178,25 @@ body {
 .jumbotron-container {
   position: absolute;
   top: 10px;
-  left: calc((100% - var(--container-width))/2)
+  left: calc((100% - var(--container-width))/2);
+  color: white;
+  padding: 2px 5px 25px 5px;
+  max-width: 200px;
+}
+@media screen and (max-width: 576px) {
+  .jumbotron-container{
+    max-width: none;
+  }
+}
+@media screen and (min-width: 577px) and (max-width: 768px) {
+  .jumbotron-container{
+    max-width: 300px;
+  }
+}
+
+.bold-title {
+  font-weight: 700;
+  font-size: 2em;
 }
 
 
@@ -109,8 +210,7 @@ body {
   background-color: white;
   height: 363px;
   width: 255px;
-  margin-top: 38px;
-  margin-bottom: 100px;
+  margin: 10px 2px;
 }
 
 .special-offers-card__img {
@@ -122,12 +222,17 @@ body {
 }
 
 /*Footer*/
+
+footer{
+  font-size: 0.75em;
+}
+
 .footer-line1 {
   background-color: white;
   min-height: 32px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center
 }
 
 .footer-line1__element {
@@ -142,3 +247,45 @@ body {
 .footer-line2__element {
   padding: 0px 10px;
 }
+
+@media screen and (max-width: 576px) {
+  .resizable-img{
+    width:20px;
+    height:20px;
+  }
+}
+
+/*Adaptive layout*/
+
+@media screen and (max-width: 576px) {
+  .lorry-icon {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .jumbotron {
+    display: none;
+  }
+  .jumbotron-container {
+    position: static;
+    background-color: var(--main);
+  }
+  .logo {
+    height: 40px;
+    width: 40px;
+  }
+  .brand-name {
+    font-size: 1.5em;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container {
+    width: var(--container-width-sm);
+    justify-content: center;
+      }
+}
+
+
+
