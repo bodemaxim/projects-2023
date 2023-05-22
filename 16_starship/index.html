@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang='ru'>
+<head>
+  <meta charset='utf-8'>
+  <title>Starship</title>
+
+  <!-- My styles -->
+  <link rel='stylesheet' href='css/styles.css'> 
+</head>
+
+<body>
+  <!-- create cursor -->
+  <div class="cursor">
+    <img src="media/spaceship.png"
+        alt="Starship is missing in hyperspace."
+        width="128"
+        height="65">
+  </div>
+
+<!-- create background -->
+
+<div class="background-container" 
+      onload="js/script-background.js">
+
+  <div id="background-stars1">
+    <img src="media/background-only-stars1.png"
+        alt="oops"
+        height=100%>
+  </div> 
+
+  <div id="background-stars2">
+    <img src="media/background-only-stars2.png"
+        alt="oops"
+        height=100%>
+  </div> 
+
+  <div id="background-stars3">
+    <img src="media/background-only-stars3.png"
+        alt="oops"
+        height=100%>
+  </div> 
+
+</div>
+
+  <!--
+  <audio autoplay="autoplay" loop="loop">
+    <source src="media/Gibran_Alcocer-Idea_10.mp3">
+  </audio>
+  -->
+
+
+<!-- create background - РАБОТАЮЩИЙ ВАРИАНТ С ДЖАМПКАТОМ
+
+<div class="background-container" 
+      onload="myMove()">
+  <div id="background-image1">
+    <img src="media/background-long.jpeg"
+        alt="oops"
+        height=100%>
+  </div> 
+</div>
+ -->
+
+
+  <!-- JS script -->
+
+  <script src="js/script-background.js"></script>
+  <script src="js/script-starship.js"></script>
+  
+</body>
+</html>

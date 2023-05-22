@@ -1,0 +1,80 @@
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0px;
+}
+
+/********** Background **********/
+body {
+  background-image: linear-gradient(rgb(0, 0, 0), rgb(13, 0, 128));
+}
+
+
+.background-container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  z-index: 1;
+}
+
+#background-stars1 {
+  height: 100%;
+  position: absolute;
+  left: 0px;
+  z-index: 2;
+}
+
+#background-stars2 {
+  height: 100vh;
+  position: absolute;
+  left: 0px;
+  z-index: 2;
+}
+
+#background-stars3 {
+  height: 100vh;
+  position: absolute;
+  left: 0px;
+  z-index: 2;
+}
+
+/*это почему-то ломает появление курсора*/
+/**
+div.background{
+  position: absolute;
+}
+**/
+
+/*** рабочий вариант но имхо кривой
+html {
+  background-image: url(/background.jpeg);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+***/
+
+/********** Cursor **********/
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  cursor: none;
+  overflow: hidden;
+}
+
+.cursor {
+  pointer-events: none;
+  position: absolute;
+  transition: 0, 1s;
+  transform: translate(-50%, -50%);
+  z-index: 3;
+}
