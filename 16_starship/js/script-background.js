@@ -1,17 +1,21 @@
+/*расчитать ширину изображения
+  чтобы испольовать ее как расстояние сдвига
+  налево для картинки*/
 function calculateImageWidth(picture) {
   const image = document
   .getElementById(picture);
   
   const rect = image.getBoundingClientRect();
-  const rightPosition = rect.right;
-  const leftPosition = rect.left;
-  const imageWidth = (rightPosition-leftPosition).toFixed(0);
+    console.log("rect ", rect)
+  const imageWidth = rect.width.toFixed(0);
+    console.log("width внутри функции ", imageWidth)
   return(imageWidth)
 }
 
 let imageWidth=calculateImageWidth("background-stars1")
-console.log('ширина изображения в глоб обл виимости'+ imageWidth)
+console.log('ширина изображения фона в глоб обл видимости '+ imageWidth)
 let imageWidthX2 = imageWidth*2
+console.log('ширина изображения фона x2 '+ imageWidthX2)
 
 //функция для анимирования одной картинки
 function starsAnimation(picture, startingPoint) {
@@ -33,15 +37,11 @@ function starsAnimation(picture, startingPoint) {
 
   function frame() {
 
-    if (position == startingPoint-imageWidth) {
+    if (position < (Number(startingPoint)-Number(imageWidth)))
       position = startingPoint;
-      position--;
-      image.style.left = position + "px";
-
-    } else {
-      position--;  
-      image.style.left = position + "px";
-    }
+      
+    position--;  
+    image.style.left = position + "px";
   }
 }
 
