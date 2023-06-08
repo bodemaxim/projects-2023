@@ -1,0 +1,122 @@
+/* Variables */
+
+
+
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+}
+
+
+
+.container {
+  min-height: 300px;
+  width: 50%;
+  padding: 50px;
+  margin: auto;
+  border-style: solid;
+  border-color:aliceblue;
+  height: auto;
+}
+
+/********** Fonts **********/
+
+body{
+  font-size: 16px;
+}
+
+h1, h2, h3, p, label, ul, li  {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  color: aliceblue;
+}
+
+h1, h2, h3 {
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+p{
+  font-size: 1em;
+}
+
+h1{
+  font-size: 3em;
+}
+
+h2{
+  font-size: 2em;
+}
+
+h3{
+  font-size: 1.75em;
+}
+
+.main-heading {
+  text-align: center;
+  margin-top: 1em;
+}
+
+.main-heading-motto {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/********** Task List **********/
+
+/*Исправить: этот селектор удаляет буллет перед задачей*/
+li {
+  display: flex;
+  align-items: center;
+}
+
+.li-buttons{
+  width: 150px;
+  position: float;
+}
+
+.li-delete-button{
+  background-color: red;
+}
+
+.li-edit-button{
+  background-color: yellow;
+}
+
+.li-done-button{
+  background-color: green;
+}
+
+.doneTask{
+  color: green;
+}
+
+/********** Background style **********/
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  background-color: black;
+  background-repeat: repeat;
+  background-size: cover;
+}
+
+main {
+  flex-grow: 1; /* Allow main to grow and take up remaining space */
+}
+
+footer {
+  flex-shrink: 0; /* Prevent the footer from shrinking */
+
+  height: 10vh;
+  width: 100vw;
+  bottom: 0px;
+  background-image: linear-gradient(to bottom, rgb(0, 0, 0) 10%, rgb(144, 0, 255) 100%);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
