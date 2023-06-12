@@ -6,11 +6,11 @@ const toDoList = document.getElementById('toDoList'); //список, где о�
 function addButtonsToItem(listItem) {
 
   const buttonDiv = document.createElement('div');
-  buttonDiv.classList.add('li-buttons');
+  buttonDiv.classList.add('li-buttons-container');
 
   // Создаем кнопку удаления
   const deleteButton = document.createElement('button');
-  deleteButton.classList.add('li-delete-button');
+  deleteButton.classList.add('li-delete-button', 'li-buttons');
   deleteButton.textContent = '╳';
 
   deleteButton.addEventListener('click', function () {
@@ -22,7 +22,7 @@ function addButtonsToItem(listItem) {
 
   // Создаем кнопку редактирования
   const editButton = document.createElement('button');
-  editButton.classList.add('li-edit-button');
+  editButton.classList.add('li-edit-button', 'li-buttons');
   editButton.textContent = '🖊';
 
   editButton.addEventListener('click', function () {
@@ -37,7 +37,7 @@ function addButtonsToItem(listItem) {
 
   // Создаем кнопку выполнения
   const doneButton = document.createElement('button');
-  doneButton.classList.add('li-done-button');
+  doneButton.classList.add('li-done-button', 'li-buttons');
   doneButton.textContent = '✓';
 
   doneButton.addEventListener('click', function () {

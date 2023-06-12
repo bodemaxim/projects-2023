@@ -1,0 +1,13 @@
+
+#toDoList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  list-style-type: disc !important;
+  margin-left: 0;
+}
+
+.doneTask{
+  color: green;
+}
