@@ -8,8 +8,8 @@
 .li-buttons{
   height: 2em;
   width: 2em;
-  border: 2px solid #000;
-  border-radius: 10px;
+  border: 2px solid aliceblue;
+  border-radius: 5px;
   margin-left: 0.25em;
   margin-right: 0.25em;
 }

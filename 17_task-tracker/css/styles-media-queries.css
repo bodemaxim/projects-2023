@@ -4,6 +4,9 @@
     body{
         font-size: 14px;
     }
+    main{
+        margin: 3px;
+    }
     .container {
         border-style: none;
         width: 100%;
@@ -14,11 +17,9 @@
     }
 }
 
+/*S  Тут не понял, почему макс-видт нудо 575 делать а не 576*/
 
-
-/*S*/
-
-@media  (min-width: 576px) and (max-width: 767px)  {
+@media  (min-width: 575px) and (max-width: 767px)  {
     body{
         font-size: 15px;
     }
@@ -60,7 +61,3 @@
         padding: 3em;
       }
 }
-
-
-
-

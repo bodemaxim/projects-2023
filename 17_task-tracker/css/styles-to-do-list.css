@@ -1,13 +1,34 @@
-
-#toDoList li {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  list-style-type: disc !important;
-  margin-left: 0;
+#toDoList {
+  list-style-type: none;
+  margin-left: -30px;
 }
 
-.doneTask{
+#toDoList li {
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+}
+
+.li-text-container,
+.li-buttons-container {
+  display: inline-block;
+}
+
+#toDoList .li-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.li-text-container {
+  flex: 1; /* Allow text container to expand and take available space */
+  max-width: calc(100% - 10em);
+}
+
+.li-buttons-container {
+  margin-left: auto;
+  white-space: nowrap;
+}
+
+.doneTask {
   color: green;
 }

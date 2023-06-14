@@ -69,9 +69,23 @@ form.addEventListener('submit', function (event) {
   const newTask = document.getElementById('newTask').value;
 
   const listItem = document.createElement('li');
-  listItem.textContent = `Новая задача: ${newTask}`; //почему newTask не виден внутри функции addButtons?
 
-  addButtonsToItem(listItem);
+  const listItemContainer = document.createElement('div')
+  listItemContainer.classList.add('li-container');
+
+  const listItemTextContainer = document.createElement('div')
+  listItemTextContainer.classList.add('li-text-container');
+
+  listItem.appendChild(listItemContainer);
+  listItemContainer.appendChild(listItemTextContainer);
+
+
+
+
+
+  listItemTextContainer.textContent = `Новая задача: ${newTask}`; //почему newTask не виден внутри функции addButtons?
+
+  addButtonsToItem(listItemContainer);
 
   toDoList.appendChild(listItem);
 
