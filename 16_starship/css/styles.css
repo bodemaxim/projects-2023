@@ -7,6 +7,10 @@ html, body {
   margin: 0px;
 }
 
+html, body {
+  overflow: hidden;
+}
+
 /********** Background **********/
 body {
   background-image: linear-gradient(rgb(0, 0, 0), rgb(13, 0, 128));
