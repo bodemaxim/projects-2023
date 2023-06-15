@@ -33,17 +33,7 @@ body {
   z-index: 2;
 }
 
-.meteorite-sample {
-  height: 200px;
-  width: 200px;
-  position: absolute;
-  left: 0px;
-  z-index: 3;
-}
-
 .meteorite-div {
-  height: 200px;
-  width: 200px;
   position: absolute;
   left: 0px;
   z-index: 3;

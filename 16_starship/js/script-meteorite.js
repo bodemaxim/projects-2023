@@ -1,4 +1,7 @@
-//считаем ширину экрана, чтобы метеорит пролетал от края до края
+//*************************************************************
+//ФУНКЦИЯ - считаем ширину экрана, чтобы использовать в анимации метеорита
+//*************************************************************
+
 
 function calculateScreenWidth() {
   const fullScreenDiv = document.getElementById("meteorite-container");
@@ -11,75 +14,98 @@ function calculateScreenWidth() {
 }
 
 let screenWidth = calculateScreenWidth();
-//console.log('ширина экрана: ' + screenWidth);
 
-//НОВАЯ ФУНКЦИЯ АНИМАЦИИ МЕТЕОРИТОВ
+
+
+//*************************************************************
+//ФУНКЦИЯ АНИМАЦИИ МЕТЕОРИТОВ
+//*************************************************************
 
 function rockAnimation(meteoriteDiv) {
+
+  //создаем рандомные числа для скорости и отправной точки метеорита
+  function generateRandomNumber(min, max) {
+    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;  
+    return randomNumber;
+  }
+
+  const randomSpeed = generateRandomNumber(2, 15);
+  const randomStartPoint = generateRandomNumber(0, Math.floor(screenWidth/2));
+  console.log('стартовая точка метеорита X ', randomStartPoint)
+
+  //задаем стартовое положение дива метеорита
   const image = meteoriteDiv
-  let position = screenWidth;
+  let position = Math.floor(screenWidth) + Math.floor(randomStartPoint);
   image.style.left = position + "px";
 
-  //расчитать ширину изображения метеорита
+  //расчитываем ширину изображения метеорита
   const rect = image.getBoundingClientRect();
   const rightPosition = rect.right;
   const leftPosition = rect.left;
   const imageWidth = (rightPosition - leftPosition).toFixed(0);
-  //console.log('ширина метеорита: ' + imageWidth)
 
-  //создаем рандомное число для скорости метеорита
-  function generateRandomSpeed(min, max) {
-    // Генерируем случайное число от min до max (включительно)
-    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-    
-    return randomNumber;
-  }
-
-  const randomSpeed = generateRandomSpeed(2, 15)
-
-  // создать анимацию
+  // создаем анимацию - таймер перемещения кадра и функцию перемещения
   let movementRate = null;
   movementRate = setInterval(frame, randomSpeed);
 
   function frame() {
     if (position < -(Number(screenWidth) + Number(imageWidth)))
-      position = screenWidth;
+      meteoriteDiv.remove();
 
     position--;
     image.style.left = position + "px";
   }
 }
 
-//НОВЫЙ БЛОК**************************************************************************
+//ТАЙМЕР для срабатывания функции - запуска рандомного кол-ва метеоритов
 
-//создание рандомного числа метеоритов
-function generateRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
+let movementRate = null;
+movementRate = setInterval(meteoriteGroupLaunch, 7000);
 
-const randomNumberOfMeteorites = generateRandomNumber(4, 10);
-console.log('случайное число метеоритов', randomNumberOfMeteorites)
 
-const meteoriteContainer = document.getElementById('meteorite-container');
 
-// Create the specified number of div elements and append them to 'meteorite-container'
-for (let i = 0; i < randomNumberOfMeteorites; i++) {
-  const div = document.createElement('div');
-  div.classList.add('meteorite-div');
-  div.classList.add('threat');
-  meteoriteContainer.appendChild(div);
+//*************************************************************
+//ФУНКЦИЯ - ЗАПУСК РАНДОМНОГО КОЛИЧЕСТВА МЕТЕОРИТОВ
+//*************************************************************
 
-  //добавляем в див метеорита картинку
-  const img = document.createElement('img');
-  img.src = 'media/rock1.png';
-  img.classList.add('meteorite-img');
-  div.appendChild(img);
+function meteoriteGroupLaunch() {
+  
+  //создание рандомного числа метеоритов
+  function generateRandomNumber(min, max) {
+    return Math.floor(Math.random() * (max - min + 1)) + min;
+  }
 
-  //Приписываем диву рандомное положение по высоте
-  const screenHeight = window.innerHeight;
-  const randomPosition = Math.floor(Math.random() * screenHeight);
-  div.style.top = randomPosition + 'px';
+  const randomNumberOfMeteorites = generateRandomNumber(4, 10);
+  const meteoriteContainer = document.getElementById('meteorite-container');
 
-  //применяем функцию анимации
-  rockAnimation(div)
+  // Создаем заданное число дивов-метеоритов и помещаем в 'meteorite-container'
+  for (let i = 0; i < randomNumberOfMeteorites; i++) {
+    const div = document.createElement('div');
+    div.classList.add('meteorite-div');
+    div.classList.add('threat');
+    meteoriteContainer.appendChild(div);
+
+    //добавляем в див метеорита картинку
+    const img = document.createElement('img');
+    img.src = 'media/rock1.png';
+    img.classList.add('meteorite-img');
+    div.appendChild(img);
+
+    //Задаем картинке метеорита рандомный размер
+    function generateRandomNumber(min, max) {
+      return Math.floor(Math.random() * (max - min + 1)) + min;
+    }
+    const randomSize = generateRandomNumber(100, 300);
+
+    img.style.height = randomSize + "px";
+    img.style.width = randomSize + "px";
+
+    //Приписываем диву рандомное положение по высоте
+    const screenHeight = window.innerHeight;
+    const randomPosition = Math.floor(Math.random() * screenHeight);
+    div.style.top = randomPosition + 'px';
+
+    //применяем функцию анимации
+    rockAnimation(div)
+  }
 }
