@@ -1,3 +1,6 @@
+//Здесь есть функция rock animation для sample meteorite
+
+
 //считаем ширину экрана, чтобы метеорит пролетал от края до края
 
 function calculateScreenWidth() {
@@ -13,10 +16,8 @@ function calculateScreenWidth() {
 let screenWidth = calculateScreenWidth();
 //console.log('ширина экрана: ' + screenWidth);
 
-//НОВАЯ ФУНКЦИЯ АНИМАЦИИ МЕТЕОРИТОВ
-
 function rockAnimation(meteoriteDiv) {
-  const image = meteoriteDiv
+  const image = document.querySelector(meteoriteDiv);
   let position = screenWidth;
   image.style.left = position + "px";
 
@@ -27,19 +28,9 @@ function rockAnimation(meteoriteDiv) {
   const imageWidth = (rightPosition - leftPosition).toFixed(0);
   //console.log('ширина метеорита: ' + imageWidth)
 
-  //создаем рандомное число для скорости метеорита
-  function generateRandomSpeed(min, max) {
-    // Генерируем случайное число от min до max (включительно)
-    const randomNumber = Math.floor(Math.random() * (max - min + 1)) + min;
-    
-    return randomNumber;
-  }
-
-  const randomSpeed = generateRandomSpeed(2, 15)
-
   // создать анимацию
   let movementRate = null;
-  movementRate = setInterval(frame, randomSpeed);
+  movementRate = setInterval(frame, 5);
 
   function frame() {
     if (position < -(Number(screenWidth) + Number(imageWidth)))
@@ -50,20 +41,17 @@ function rockAnimation(meteoriteDiv) {
   }
 }
 
+rockAnimation(".meteorite-sample");
+
 //НОВЫЙ БЛОК**************************************************************************
 
 //создание рандомного числа метеоритов
-function generateRandomNumber(min, max) {
-  return Math.floor(Math.random() * (max - min + 1)) + min;
-}
 
-const randomNumberOfMeteorites = generateRandomNumber(4, 10);
-console.log('случайное число метеоритов', randomNumberOfMeteorites)
-
+const numberOfDivs = Math.floor(Math.random() * 4) + 2;
 const meteoriteContainer = document.getElementById('meteorite-container');
 
 // Create the specified number of div elements and append them to 'meteorite-container'
-for (let i = 0; i < randomNumberOfMeteorites; i++) {
+for (let i = 0; i < numberOfDivs; i++) {
   const div = document.createElement('div');
   div.classList.add('meteorite-div');
   div.classList.add('threat');
@@ -81,5 +69,5 @@ for (let i = 0; i < randomNumberOfMeteorites; i++) {
   div.style.top = randomPosition + 'px';
 
   //применяем функцию анимации
-  rockAnimation(div)
+  
 }
