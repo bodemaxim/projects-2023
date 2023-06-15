@@ -52,10 +52,6 @@ div.projectCard {
   height: 100%;
 }
 
-.flex-container {
-  display: flex;
-}
-
 .btnContainer {
   min-height: 60px;
   width: 100%;

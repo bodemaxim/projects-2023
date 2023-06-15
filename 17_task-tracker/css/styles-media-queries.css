@@ -1,6 +1,6 @@
 /*XS*/
 
-@media  (max-width: 575px)  {
+@media  (max-width: 576px)  {
     body{
         font-size: 14px;
     }
@@ -17,9 +17,9 @@
     }
 }
 
-/*S  Тут не понял, почему макс-видт нудо 575 делать а не 576*/
+/*S*/
 
-@media  (min-width: 575px) and (max-width: 767px)  {
+@media  (min-width: 576px) and (max-width: 768px)  {
     body{
         font-size: 15px;
     }
@@ -30,7 +30,7 @@
 }
 
 /*M*/
-@media (min-width: 768px) and (max-width: 991px) {
+@media (min-width: 768px) and (max-width: 992px) {
     body{
         font-size: 16px;
     }
@@ -41,7 +41,7 @@
 }
 
 /*L*/
-@media (min-width: 992px) and (max-width: 1199px) {
+@media (min-width: 992px) and (max-width: 1200px) {
     body{
         font-size: 17px;
     }

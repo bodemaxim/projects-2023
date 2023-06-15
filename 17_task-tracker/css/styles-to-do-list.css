@@ -21,7 +21,9 @@
 
 .li-text-container {
   flex: 1; /* Allow text container to expand and take available space */
-  max-width: calc(100% - 10em);
+  max-width: calc(100% - 11em); /* to make sure buttons never get hidden being pressed to the right */
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .li-buttons-container {
