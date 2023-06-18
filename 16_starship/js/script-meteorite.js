@@ -4,7 +4,7 @@
 
 
 function calculateScreenWidth() {
-  const fullScreenDiv = document.getElementById("meteorite-container");
+  const fullScreenDiv = document.getElementById("element-container");
   const rect = fullScreenDiv.getBoundingClientRect();
   console.log('rect метеорита ', rect);
   const rightPosition = rect.right;
@@ -31,7 +31,6 @@ function rockAnimation(meteoriteDiv) {
 
   const randomSpeed = generateRandomNumber(2, 15);
   const randomStartPoint = generateRandomNumber(0, Math.floor(screenWidth/2));
-  console.log('стартовая точка метеорита X ', randomStartPoint)
 
   //задаем стартовое положение дива метеорита
   const image = meteoriteDiv
@@ -76,13 +75,14 @@ function meteoriteGroupLaunch() {
   }
 
   const randomNumberOfMeteorites = generateRandomNumber(4, 10);
-  const meteoriteContainer = document.getElementById('meteorite-container');
+  const meteoriteContainer = document.getElementById('element-container');
 
-  // Создаем заданное число дивов-метеоритов и помещаем в 'meteorite-container'
+  // Создаем заданное число дивов-метеоритов и помещаем в 'element-container'
   for (let i = 0; i < randomNumberOfMeteorites; i++) {
     const div = document.createElement('div');
     div.classList.add('meteorite-div');
     div.classList.add('threat');
+    div.classList.add('destructible');
     meteoriteContainer.appendChild(div);
 
     //добавляем в див метеорита картинку
@@ -104,6 +104,15 @@ function meteoriteGroupLaunch() {
     const screenHeight = window.innerHeight;
     const randomPosition = Math.floor(Math.random() * screenHeight);
     div.style.top = randomPosition + 'px';
+
+    //Добавляем столкновение со Старшипом (курсором)
+    function addCollideEvent(threatObject) {
+      threatObject.addEventListener('mouseover', () => {
+        alert('Game over');
+      });
+    }
+
+    addCollideEvent(div)
 
     //применяем функцию анимации
     rockAnimation(div)
