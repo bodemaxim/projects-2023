@@ -6,7 +6,6 @@
 function calculateScreenWidth() {
   const fullScreenDiv = document.getElementById("element-container");
   const rect = fullScreenDiv.getBoundingClientRect();
-  console.log('rect метеорита ', rect);
   const rightPosition = rect.right;
   const leftPosition = rect.left;
   const screenWidth = (rightPosition - leftPosition).toFixed(0);
@@ -16,12 +15,19 @@ function calculateScreenWidth() {
 let screenWidth = calculateScreenWidth();
 
 
+//*************************************************************
+//УРОВНИ СЛОЖНОСТИ
+//*************************************************************
+
+import { myLvl, changeLevel } from './script-levels.js';
+changeLevel();
+
 
 //*************************************************************
 //ФУНКЦИЯ АНИМАЦИИ МЕТЕОРИТОВ
 //*************************************************************
 
-function rockAnimation(meteoriteDiv) {
+function rockAnimation(myLvl, meteoriteDiv) {
 
   //создаем рандомные числа для скорости и отправной точки метеорита
   function generateRandomNumber(min, max) {
@@ -29,11 +35,11 @@ function rockAnimation(meteoriteDiv) {
     return randomNumber;
   }
 
-  const randomSpeed = generateRandomNumber(2, 15);
+  const randomSpeed = generateRandomNumber(myLvl.maxRockSpeed, myLvl.minRockSpeed);
   const randomStartPoint = generateRandomNumber(0, Math.floor(screenWidth/2));
 
   //задаем стартовое положение дива метеорита
-  const image = meteoriteDiv
+  const image = meteoriteDiv;
   let position = Math.floor(screenWidth) + Math.floor(randomStartPoint);
   image.style.left = position + "px";
 
@@ -59,7 +65,7 @@ function rockAnimation(meteoriteDiv) {
 //ТАЙМЕР для срабатывания функции - запуска рандомного кол-ва метеоритов
 
 let movementRate = null;
-movementRate = setInterval(meteoriteGroupLaunch, 7000);
+movementRate = setInterval(() => meteoriteGroupLaunch(myLvl), myLvl.rocksGenerationRate);
 
 
 
@@ -67,14 +73,14 @@ movementRate = setInterval(meteoriteGroupLaunch, 7000);
 //ФУНКЦИЯ - ЗАПУСК РАНДОМНОГО КОЛИЧЕСТВА МЕТЕОРИТОВ
 //*************************************************************
 
-function meteoriteGroupLaunch() {
+function meteoriteGroupLaunch(myLvl) {
   
   //создание рандомного числа метеоритов
   function generateRandomNumber(min, max) {
     return Math.floor(Math.random() * (max - min + 1)) + min;
   }
 
-  const randomNumberOfMeteorites = generateRandomNumber(4, 10);
+  const randomNumberOfMeteorites = generateRandomNumber(myLvl.minNumberOfRocks, myLvl.maxNumberOfRocks);
   const meteoriteContainer = document.getElementById('element-container');
 
   // Создаем заданное число дивов-метеоритов и помещаем в 'element-container'
@@ -115,6 +121,6 @@ function meteoriteGroupLaunch() {
     addCollideEvent(div)
 
     //применяем функцию анимации
-    rockAnimation(div)
+    rockAnimation(myLvl, div)
   }
 }

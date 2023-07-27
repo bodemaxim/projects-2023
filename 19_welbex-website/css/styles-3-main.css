@@ -1,0 +1,68 @@
+.main-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-shrink: 0;
+  flex-wrap: wrap;
+}
+
+.main-content__offer-description {
+  max-width: 70%;
+}
+
+.main-content__call-to-action {
+  text-align: right;
+  margin-left: auto;
+}
+
+.main-content__call-to-action-title {
+  width: 300px;
+  margin-left: auto;
+}
+
+.main-content__gifts-container {
+  margin: auto;
+  width: 450px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-left: auto;
+}
+
+.main-content__gifts {
+  display: block;
+  max-width: 450px;
+  border: none;
+  margin: 0px !important;
+}
+
+.main-content__gift {
+  height: 100px;
+  width: 200px;
+  margin: 10px 2px;
+  text-align: right;
+}
+
+.main-content__consult-button {
+  height: 4em;
+  width: calc(4 * 4.239em);
+  background-color: #4077f3;
+  color: #e4e5ea;
+  margin: 20px 0px 20px auto;
+}
+
+.main-content__offer-title:hover,
+#welbex-brandname:hover,
+.main-content__offer-description:hover,
+.main-content__call-to-action-title:hover,
+.main-content__free-consultation:hover,
+.main-content__gift-title:hover,
+.main-content__gift-description:hover {
+  text-decoration: underline;
+  text-decoration-color: #4077f3;
+}
+
+.main-content__consult-button:hover {
+  border: 2px solid #85a3eb;
+}

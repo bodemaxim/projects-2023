@@ -1,0 +1,91 @@
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+html, body {
+  overflow: hidden;
+}
+
+/********** Background **********/
+body {
+  background-image: url(/media/welcome-image.png);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/********** Fonts **********/
+h1, h2, h3, p {
+  font-family: Arial, sans-serif;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+  font-size: 5em;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+/********** Menu **********/
+.menu {
+  background-color: #f1f1f1;
+  padding: 20px;
+  width: 50%;
+  margin: auto;
+}
+
+.menu ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.menu ul li {
+  margin-bottom: 10px;
+}
+
+.menu ul ul {
+  margin-left: 20px;
+}
+
+.menu ul ul li {
+  display: flex;
+  align-items: center;
+}
+
+.menu ul ul li .parameter {
+  display: flex;
+  align-items: center;
+  width: 30%;
+}
+
+.menu ul ul li .parameter label {
+  margin-right: 10px;
+  white-space: nowrap;
+}
+
+.menu ul ul li .parameter input[type="range"] {
+  flex-grow: 1;
+}
+
+input[type="range"] {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  transition: color 0.3s;
+}
+
+a:hover {
+  color: #ff0000;
+}

@@ -5,59 +5,33 @@
   <title>Starship</title>
 
   <!-- My styles -->
-  <link rel='stylesheet' href='css/styles.css'> 
+  <link rel='stylesheet' href='css/styles-starting-page.css'> 
 </head>
 
 <body>
-  <!-- create cursor -->
-  <div class="cursor">
-    <img src="media/spaceship.png"
-        alt="Starship is missing in hyperspace."
-        width="128"
-        height="65">
+
+  <h1>STARSHIP</h1>
+
+  <!-- Menu -->
+  <div class="menu">
+    <ul>
+      <li><a id="game" href="game.html">Новая игра</a></li>
+      <li>
+        <div class="parameter">
+          Музыка:
+          <input id="music-settings" type="range" min="0" max="100">
+        </div>
+        <div class="parameter">
+          Звуки:
+          <input id="sound-settings" type="range" min="0" max="100">
+        </div>
+      </li>
+    </ul>
+    <p>Совет: чтобы игра работала правильно, играй с ноутбука или компьютера.</p>
   </div>
-
-  <!-- create background -->
-
-  <div class="fullscreen-container" 
-        onload="js/script-background.js">
-
-    <div id="background-stars1">
-      <img src="media/background-only-stars1.png"
-          alt="oops"
-          height=100%>
-    </div> 
-
-    <div id="background-stars2">
-      <img src="media/background-only-stars2.png"
-          alt="oops"
-          height=100%>
-    </div> 
-
-    <div id="background-stars3">
-      <img src="media/background-only-stars3.png"
-          alt="oops"
-          height=100%>
-    </div> 
-  </div>
-
-  <!-- create container for ships, meteorites and missiles -->
-  <div class="fullscreen-container" id="element-container" 
-        onload="js/script-meteorite.js">
-  </div>
-
-  <!--
-  <audio autoplay="autoplay" loop="loop">
-    <source src="media/Gibran_Alcocer-Idea_10.mp3">
-  </audio>
-  -->
-
-<!-- JS script -->
-
-  <script src="js/script-background.js"></script>
-  <script src="js/script-starship.js"></script>
-  <script src="js/script-meteorite.js"></script>
-  <script src="js/script-missile.js"></script>
+  
+  <script src="js/script-music-index.js"></script>
+  <script src="js/script-sounds-index.js"></script>
 
 </body>
 </html>

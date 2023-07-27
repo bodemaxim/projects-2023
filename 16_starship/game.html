@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang='ru'>
+<head>
+  <meta charset='utf-8'>
+  <title>Starship</title>
+
+  <!-- My styles -->
+  <link rel='stylesheet' href='css/styles.css'> 
+</head>
+
+<body>
+
+  <!-- audio -->
+  <audio id="music-player" src="media/Gibran_Alcocer-Idea_10.mp3" autoplay></audio>
+  <audio id="explosion-audio" src="media/explosion.mp3"></audio>
+  <audio id="shot-audio" src="media/shot.mp3"></audio>
+
+  <!-- create cursor -->
+  <div class="cursor">
+    <img src="media/spaceship.png"
+        alt="Starship is missing in hyperspace."
+        width="128"
+        height="65">
+  </div>
+
+  <!-- create background -->
+  <div class="fullscreen-container">
+    <div id="background-stars1">
+      <img src="media/background-only-stars1.png"
+          alt="oops"
+          height=100%>
+    </div> 
+
+    <div id="background-stars2">
+      <img src="media/background-only-stars2.png"
+          alt="oops"
+          height=100%>
+    </div> 
+
+    <div id="background-stars3">
+      <img src="media/background-only-stars3.png"
+          alt="oops"
+          height=100%>
+    </div> 
+  </div>
+
+  <!-- create container for ships, meteorites and missiles -->
+  <div class="fullscreen-container" id="element-container"></div>
+
+  <!-- JS script -->
+  <script src="js/script-background.js"></script>
+  <script src="js/script-starship.js"></script>
+  <script src="js/script-meteorite.js" type="module"></script>
+  <script src="js/script-missile.js" type="module"></script>
+  <script src="script-levels.js" type="module"></script>
+  <script src="js/script-music-game.js"></script>
+  <script src="js/script-sounds-game.js"  type="module"></script>
+
+</body>
+</html>
