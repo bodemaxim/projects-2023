@@ -29,7 +29,7 @@
           <div class="navbar__logo-brand-name">
             <img
               id="logo"
-              src="images/logo_welbex.svg"
+              src="./images/logo_welbex.svg"
               class="navbar__logo-brand-name-pic"
               alt="Logo Welbex"
             />
@@ -39,40 +39,42 @@
           </p>
         </div>
 
-        <ul class="navbar__list">
-          <li class="navbar__element">Услуги</li>
-          <li class="navbar__element">Виджеты</li>
-          <li class="navbar__element">Интеграции</li>
-          <li class="navbar__element">Кейсы</li>
-          <li class="navbar__element hide-on-mobile">Сертификаты</li>
-        </ul>
+        <div class="navbar__right-block">
+          <ul class="navbar__list">
+            <li class="navbar__element">Услуги</li>
+            <li class="navbar__element">Виджеты</li>
+            <li class="navbar__element">Интеграции</li>
+            <li class="navbar__element">Кейсы</li>
+            <li class="navbar__element hide-on-mobile">Сертификаты</li>
+          </ul>
 
-        <ul class="navbar__list navbar__list-contacts hide-on-mobile">
-          <li class="navbar__element">+7 555 555-55-55</li>
-          <li class="navbar__element very-right-element">
-            <img
-              src="images/logo-telegram.svg"
-              alt="Telegram Icon"
-              class="navbar__social-media-icon"
-            />
-          </li>
-          <li class="navbar__element navbar__element--social">
-            <img
-              src="images/logo-viber.svg"
-              alt="Viber Icon"
-              class="navbar__social-media-icon"
-            />
-          </li>
-          <li
-            class="navbar__element navbar__element--social very-right-element"
-          >
-            <img
-              src="images/logo-whatsapp.svg"
-              alt="WhatsApp Icon"
-              class="navbar__social-media-icon"
-            />
-          </li>
-        </ul>
+          <ul class="navbar__list navbar__list-contacts hide-on-mobile">
+            <li class="navbar__element right-aligned">+7 555 555-55-55</li>
+            <li class="navbar__element right-aligned">
+              <img
+                src="images/logo-telegram.svg"
+                alt="Telegram Icon"
+                class="navbar__social-media-icon"
+              />
+            </li>
+            <li class="navbar__element navbar__element--social">
+              <img
+                src="images/logo-viber.svg"
+                alt="Viber Icon"
+                class="navbar__social-media-icon"
+              />
+            </li>
+            <li
+              class="navbar__element navbar__element--social very-right-element"
+            >
+              <img
+                src="images/logo-whatsapp.svg"
+                alt="WhatsApp Icon"
+                class="navbar__social-media-icon"
+              />
+            </li>
+          </ul>
+        </div>
       </nav>
 
       <!--Main part-->
@@ -96,8 +98,14 @@
               >
               мы дарим:
             </div>
-            <div class="main-content__gifts hide-on-mobile">
-              <div class="main-content__gifts-container">
+            <div class="main-content__gifts">
+              <div class="main-content__gifts-container-mobile hide-on-desktop">
+                <h2 class="main-content__gift-title-mobile">SKYPE АУДИТ</h2>
+                <h2 class="main-content__gift-title-mobile">DASHBOARD</h2>
+                <h2 class="main-content__gift-title-mobile">30 ВИДЖЕТОВ</h2>
+                <h2 class="main-content__gift-title-mobile">МЕСЯЦ AMO CRM</h2>
+              </div>
+              <div class="main-content__gifts-container hide-on-mobile">
                 <div class="main-content__gift">
                   <h2 class="main-content__gift-title">ВИДЖЕТЫ</h2>
                   <p class="main-content__gift-description">
@@ -123,7 +131,7 @@
                   </p>
                 </div>
               </div>
-              <button class="main-content__consult-button">
+              <button class="main-content__consult-button hide-on-mobile">
                 Получить консультацию
               </button>
             </div>
@@ -142,7 +150,26 @@
             </ul>
           </div>
 
-          <div class="footer__text">
+          <div class="footer__text hide-on-desktop">
+            <h2 class="footer__text-title">МЕНЮ</h2>
+            <div class="footer__table">
+              <ul class="footer__list-1">
+                <li>Расчет стоимости</li>
+                <li>Услуги</li>
+                <li>Виджеты</li>
+                <li>Интеграции</li>
+                <li>Наши клиенты</li>
+              </ul>
+              <ul class="footer__list-2">
+                <li>Кейсы</li>
+                <li>Благодарственные письма</li>
+                <li>Сертификаты</li>
+                <li>Блог на Youtube</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="footer__text hide-on-mobile">
             <h2 class="footer__text-title">МЕНЮ</h2>
             <ul class="footer__list">
               <li>Расчет стоимости</li>
@@ -153,7 +180,7 @@
             </ul>
           </div>
 
-          <div class="footer__text">
+          <div class="footer__text hide-on-mobile">
             <h2 class="footer__text-title" id="footer-placeholder">
               placeholder
             </h2>

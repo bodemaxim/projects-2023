@@ -50,7 +50,7 @@ body {
 #free-consultation {
   font-weight: 700;
   background: linear-gradient(to right, var(--yellow), var(--pink));
-  background-clip: text;
+  background-clip: content-box;
   -webkit-background-clip: text;
   color: transparent;
   line-height: 2em;

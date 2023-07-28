@@ -7,25 +7,8 @@
   justify-content: space-between;
   align-items: flex-start;
   flex-shrink: 0;
-  padding: 0px !important;
   flex-wrap: wrap;
-}
-
-.footer div {
-  padding: 15px 0px 10px 0px;
-}
-
-.footer div.text {
-  position: relative;
-  top: -2px;
-}
-
-#footer-placeholder {
-  visibility: hidden;
-}
-
-.text {
-  flex: 1;
+  margin: 1em 0px;
 }
 
 .footer__text--right-align {
@@ -33,20 +16,26 @@
 }
 
 .footer__element {
-  padding: 10px 0px 10px 0px;
+  padding: 10px 0px;
 }
 
 .footer__element--social-media {
   display: flex;
-  flex-direction: row;
   justify-content: right;
   margin-right: 40px;
 }
 footer li {
   list-style: none;
-  margin-left: -40px;
 }
 
 .footer__footnote {
   text-align: right;
+}
+
+#footer-placeholder {
+  visibility: hidden;
+}
+
+.footer__list-1 {
+  margin-right: 2em !important;
 }

@@ -2,7 +2,7 @@
 
 @media (max-width: 576px) {
   body {
-    font-size: 14px;
+    font-size: 12px;
   }
   .container {
     width: 98%;
@@ -10,6 +10,7 @@
   .hide-on-mobile {
     display: none !important;
   }
+
   .footer__text--right-align {
     text-align: left;
   }
@@ -19,23 +20,34 @@
     flex-grow: 1;
     justify-content: space-between;
   }
+  .main-content__call-to-action {
+    margin: 1em 0px;
+    text-align: left;
+  }
+  .main-content__call-to-action-title {
+    width: 100%;
+    margin: 1em 0px;
+  }
 }
 
 /*S*/
 
 @media (min-width: 576px) and (max-width: 768px) {
   body {
-    font-size: 15px;
+    font-size: 13px;
   }
   .container {
     width: 95%;
+  }
+  .hide-on-desktop {
+    display: none !important;
   }
 }
 
 /*M*/
 @media (min-width: 768px) and (max-width: 992px) {
   body {
-    font-size: 16px;
+    font-size: 14px;
   }
   footer {
     font-size: 12px;
@@ -43,24 +55,33 @@
   .container {
     width: 90%;
   }
+  .hide-on-desktop {
+    display: none !important;
+  }
 }
 
 /*L*/
 @media (min-width: 992px) and (max-width: 1200px) {
   body {
-    font-size: 17px;
+    font-size: 15px;
   }
   .container {
     width: 85%;
+  }
+  .hide-on-desktop {
+    display: none !important;
   }
 }
 
 /*XL*/
 @media (min-width: 1200px) {
   body {
-    font-size: 18px;
+    font-size: 16px;
   }
   .container {
     width: 80%;
+  }
+  .hide-on-desktop {
+    display: none !important;
   }
 }
