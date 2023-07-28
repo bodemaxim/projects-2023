@@ -39,7 +39,7 @@
 .main-content__gifts-container-mobile {
   align-items: self-start;
   display: grid;
-  grid-template-columns: repeat(2, 200px);
+  grid-template-columns: repeat(2, 48%);
   grid-gap: 2px 1em;
   margin: 1em 0;
 }

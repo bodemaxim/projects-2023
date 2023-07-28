@@ -1,6 +1,7 @@
 /*XS*/
 
 @media (max-width: 576px) {
+  /*general*/
   body {
     font-size: 12px;
   }
@@ -11,15 +12,36 @@
     display: none !important;
   }
 
-  .footer__text--right-align {
-    text-align: left;
-  }
+  /*Navbar*/
   .navbar__list {
     padding: 0px;
     margin: 0px;
     flex-grow: 1;
     justify-content: space-between;
   }
+
+  .navbar {
+    padding: 0px;
+    margin: 10px 0px;
+  }
+
+  .navbar__right-block {
+    width: 100%;
+  }
+
+  .navbar__element {
+    text-transform: uppercase;
+    padding: 0px;
+  }
+
+  #navbar-mobile {
+    justify-content: space-evenly;
+    width: 100%;
+    margin: 0px;
+  }
+
+  /*Main*/
+
   .main-content__call-to-action {
     margin: 1em 0px;
     text-align: left;
@@ -27,6 +49,61 @@
   .main-content__call-to-action-title {
     width: 100%;
     margin: 1em 0px;
+  }
+
+  #free-consultation {
+    text-transform: lowercase;
+  }
+
+  .main-content__offer,
+  .main-content__offer-description {
+    max-width: 100%;
+  }
+
+  /*Footer*/
+
+  .footer__table {
+    display: block;
+  }
+
+  .footer__text--right-align {
+    text-align: left;
+  }
+  .footer__footnote {
+    text-align: left;
+  }
+
+  .footer__element--social-media {
+    justify-content: left;
+  }
+
+  .footer__list li {
+    text-align: left;
+  }
+
+  /*Fonts*/
+
+  #navbar-mobile,
+  .footer__list li {
+    font-size: 14px;
+  }
+
+  .main-content__offer-description,
+  .main-content__call-to-action-title {
+    font-size: 18px;
+  }
+  .main-content__call-to-action-title {
+    font-weight: 700;
+  }
+
+  .main-content__offer-title {
+    font-size: 36px;
+  }
+
+  .main-content__gifts-container-mobile {
+    font-size: 10px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
   }
 }
 

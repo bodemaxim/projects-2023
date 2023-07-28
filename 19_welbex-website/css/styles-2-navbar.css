@@ -30,10 +30,11 @@
   padding-left: 2em;
 }
 
-.navbar__list {
+#navbar-mobile,
+#navbar-contacts {
   margin-left: 5px;
-  margin-bottom: 1.5em !important;
-  margin-left: auto !important;
+  margin-bottom: 1.5em;
+  margin-left: auto;
 }
 
 .navbar__list li {

@@ -10,7 +10,8 @@ body {
 }
 
 body {
-  background-image: url('/images/back-desktop.png');
+  /*background-image: url('/images/back-desktop.png');*/
+  background-color: #0e1014;
   background-repeat: no-repeat;
   background-size: cover;
   background-position: left;

@@ -2,7 +2,8 @@
   display: block;
 }
 
-.footer__table {
+.footer__table,
+#footer__table-menu {
   display: flex;
   justify-content: space-between;
   align-items: flex-start;

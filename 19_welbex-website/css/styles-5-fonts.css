@@ -40,6 +40,13 @@ body {
   color: transparent;
 }
 
+.colored-dash {
+  background: linear-gradient(to right, var(--yellow), var(--pink));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
 .main-content__free-consultation {
   font-family: 'Inter', sans-serif;
   font-weight: 500;
