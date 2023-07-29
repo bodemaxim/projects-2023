@@ -74,7 +74,7 @@
     content: '';
     width: 104%;
     height: 100%;
-    background-image: url(/images/back-mobile.png);
+    background-image: url(../images/back-mobile.png);
     position: absolute;
     top: 0px;
     left: -2%;
