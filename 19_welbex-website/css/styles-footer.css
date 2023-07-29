@@ -5,11 +5,14 @@
 .footer__table,
 #footer__table-menu {
   display: flex;
-  justify-content: space-between;
   align-items: flex-start;
-  flex-shrink: 0;
+  justify-content: space-between;
   flex-wrap: wrap;
   margin: 1em 0px;
+}
+
+.footer__text {
+  margin: 1em;
 }
 
 .footer__text--right-align {
@@ -25,8 +28,14 @@
   justify-content: right;
   margin-right: 40px;
 }
+
+.footer__element--social {
+  margin-left: 1em;
+}
+
 footer li {
   list-style: none;
+  line-height: 2em;
 }
 
 .footer__footnote {
@@ -39,4 +48,12 @@ footer li {
 
 .footer__list-1 {
   margin-right: 2em !important;
+}
+
+.right {
+  margin: 1em 0px;
+}
+
+.left {
+  margin: 1em 0px;
 }

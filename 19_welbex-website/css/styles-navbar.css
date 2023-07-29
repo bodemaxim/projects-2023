@@ -45,3 +45,11 @@
   transform: translate(0px, -0.5em);
   padding-left: 3em;
 }
+
+.right {
+  margin: 1em 0px;
+}
+
+.left {
+  margin: 1em 0px;
+}
