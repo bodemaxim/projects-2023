@@ -54,14 +54,14 @@
             id="navbar-contacts"
           >
             <li class="navbar__element right-aligned">+7 555 555-55-55</li>
-            <li class="navbar__element right-aligned">
+            <li class="navbar__element right-aligned messenger-icon">
               <img
                 src="images/logo-telegram.svg"
                 alt="Telegram Icon"
                 class="navbar__social-media-icon"
               />
             </li>
-            <li class="navbar__element navbar__element--social">
+            <li class="navbar__element navbar__element--social messenger-icon">
               <img
                 src="images/logo-viber.svg"
                 alt="Viber Icon"
@@ -69,7 +69,7 @@
               />
             </li>
             <li
-              class="navbar__element navbar__element--social very-right-element"
+              class="navbar__element navbar__element--social very-right-element messenger-icon"
             >
               <img
                 src="images/logo-whatsapp.svg"
@@ -86,7 +86,7 @@
         <div id="main-back-mobile">
           <div class="main-content">
             <div class="main-content__offer">
-              <div class="main-content__offer-title">
+              <div class="main-content__offer-title" id="checkup">
                 Зарабатывайте<br /><span id="welbex-brandname">с WELBEX</span>
               </div>
               <p class="main-content__offer-description">
@@ -98,8 +98,12 @@
                 Вместе с
                 <span
                   class="main-content__free-consultation"
-                  id="free-consultation"
-                  >БЕСПЛАТНОЙ КОНСУЛЬТАЦИЕЙ</span
+                  id="free-consultation-1"
+                  >БЕСПЛАТНОЙ </span
+                ><span
+                  class="main-content__free-consultation"
+                  id="free-consultation-2"
+                  >КОНСУЛЬТАЦИЕЙ</span
                 >
                 мы дарим:
               </div>
@@ -246,7 +250,9 @@
         </div>
         <div class="footer__footnote">
           <p class="footer__footnote-text">©WELBEX 2022. Все права защищены.</p>
-          <p class="footer__footnote-text">Политика конфиденциальности</p>
+          <p class="footer__footnote-text" id="policy">
+            Политика конфиденциальности
+          </p>
         </div>
       </footer>
     </div>
@@ -254,39 +260,38 @@
     <div class="balls">
       <img
         src="images/red_light.png"
-        alt=" "
+        alt="red_light"
         id="red-light"
         width="300"
-        height="auto"
+        style="height: auto"
       />
-
       <img
         src="images/purple_light.png"
-        alt=" "
+        alt="purple_light"
         id="purple-light"
         width="700"
-        height="auto"
+        style="height: auto"
       />
       <img
-        src="images/purple ball.svg"
+        src="images/purple%20ball.svg"
         alt="loading"
         id="purple-ball"
-        width="150px"
-        height="150px"
+        width="150"
+        height="150"
       />
       <img
-        src="images/red ball.svg"
+        src="images/red%20ball.svg"
         alt="loading"
         id="red-ball-big"
-        width="200px"
-        height="200px"
+        width="200"
+        height="200"
       />
       <img
-        src="images/red ball.svg"
+        src="images/red%20ball.svg"
         alt="loading"
         id="red-ball-small"
-        width="50px"
-        height="50px"
+        width="50"
+        height="50"
       />
     </div>
   </body>

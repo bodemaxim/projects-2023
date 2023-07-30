@@ -1,0 +1,39 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  flex-wrap: wrap;
+}
+
+.navbar__logo-brand-name img {
+  height: 2em;
+  width: auto;
+}
+
+.navbar__logo-brand-description {
+  width: 70%;
+  margin-right: auto;
+}
+
+.navbar__element {
+  padding: 0px 0px 0px 0px;
+  margin: 10px;
+}
+
+.navbar__list {
+  margin-left: auto;
+}
+
+.navbar__list li {
+  list-style: none;
+}
+
+.navbar__list-contacts {
+  margin-left: auto;
+}
+
+.very-right-element {
+  padding-right: 0px;
+}

@@ -59,6 +59,24 @@
     text-transform: lowercase;
   }
 
+  #free-consultation-1 {
+    font-weight: 700;
+    background: linear-gradient(to right, var(--yellow), #fd7234);
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 2em;
+  }
+
+  #free-consultation-2 {
+    font-weight: 700;
+    background: linear-gradient(to right, #fd7234, var(--orange));
+    background-clip: content-box;
+    -webkit-background-clip: text;
+    color: transparent;
+    line-height: 2em;
+  }
+
   .main-content__offer,
   .main-content__offer-description {
     max-width: 100%;
@@ -152,7 +170,11 @@
     width: 95%;
   }
   .hide-on-desktop {
-    display: none !important;
+    display: none;
+  }
+
+  .navbar__logo {
+    display: none;
   }
 
   .footer__text--right-align {
@@ -165,10 +187,6 @@
 
   .footer__footnote {
     transform: translate(0px, -55px);
-  }
-
-  .navbar__logo {
-    display: none;
   }
 }
 
@@ -184,7 +202,7 @@
     width: 90%;
   }
   .hide-on-desktop {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -197,7 +215,7 @@
     width: 85%;
   }
   .hide-on-desktop {
-    display: none !important;
+    display: none;
   }
 }
 
@@ -210,6 +228,6 @@
     width: 80%;
   }
   .hide-on-desktop {
-    display: none !important;
+    display: none;
   }
 }

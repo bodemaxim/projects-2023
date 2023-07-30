@@ -50,6 +50,10 @@ footer li {
   margin-right: 2em !important;
 }
 
+#policy {
+  text-decoration: underline;
+}
+
 .right {
   margin: 1em 0px;
 }

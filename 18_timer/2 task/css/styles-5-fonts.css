@@ -1,0 +1,80 @@
+:root {
+  --light-text: #e4e5ea;
+  --dark-grey: #656566;
+  --yellow: #fcb045;
+  --pink: #ff3f78;
+}
+
+body {
+  color: var(--light-text);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1em;
+}
+
+/*Навигационная панель*/
+.navbar ul {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+.navbar p {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  font-size: 0.625em;
+}
+
+/*Главная часть*/
+.main-content__offer-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 400;
+  font-size: 3em;
+}
+
+#welbex-brandname {
+  font-family: 'Inter', sans-serif;
+  font-weight: 900;
+  background: linear-gradient(to right, var(--yellow), var(--pink));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+}
+
+.main-content__free-consultation {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+  font-size: 1.125em;
+  line-height: calc(1.125em * 1.5);
+}
+
+#free-consultation {
+  font-weight: 700;
+  background: linear-gradient(to right, var(--yellow), var(--pink));
+  background-clip: text;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 2em;
+}
+
+.main-content__gift-title,
+.main-content__consult-button {
+  font-family: 'Inter', sans-serif;
+  font-weight: 500;
+}
+
+/*Футер*/
+
+.footer__text-title {
+  font-family: 'Inter', sans-serif;
+  font-weight: 700;
+  font-size: 0.875em;
+  color: var(--dark-grey);
+}
+
+.footer__list {
+  line-height: calc(1.5 * 1em);
+}
+
+.footer__footnote {
+  font-size: 0.75em;
+}

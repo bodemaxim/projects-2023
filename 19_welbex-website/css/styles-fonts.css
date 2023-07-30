@@ -3,6 +3,7 @@
   --dark-grey: #656566;
   --yellow: #fcb045;
   --pink: #ff3f78;
+  --orange: #fd1d1d;
 }
 
 body {
@@ -56,9 +57,18 @@ body {
   line-height: calc(1.125em * 1.5);
 }
 
-#free-consultation {
+#free-consultation-1 {
   font-weight: 700;
-  background: linear-gradient(to right, var(--yellow), var(--pink));
+  background: linear-gradient(to right, #fd6731, var(--orange));
+  background-clip: content-box;
+  -webkit-background-clip: text;
+  color: transparent;
+  line-height: 2em;
+}
+
+#free-consultation-2 {
+  font-weight: 700;
+  background: linear-gradient(to right, var(--yellow), #fd532c);
   background-clip: content-box;
   -webkit-background-clip: text;
   color: transparent;
