@@ -98,6 +98,10 @@
     overflow: hidden;
   }
 
+  .balls {
+    display: none;
+  }
+
   /*Footer*/
 
   .footer__table {
